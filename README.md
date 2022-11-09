@@ -1,4 +1,4 @@
-# Mail Packets
+# Mail Packets [forum](https://forum.minetest.net/viewtopic.php?f=9&t=28859)
 
 Send player's messages along with items in a fairly new way.
 
