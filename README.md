@@ -16,7 +16,7 @@ Then you click `Save`, this seals your packet for only them to open. (again, wan
 
 From there you can issue `/mail send` with the packet in your hand to have it delivered to the player (if they are online) or delivered to their virtual mailbox. The virtual mailbox is a special node which accesses your mail from anywhere. (This means any virtual mailbox node can be used to access your mailbox) Only packets delivered while your offline or your inventory is full get placed in the virtual mailbox.
 
-> Admin can access anyone's mailbox at anytime via `/mail admin view <playername>`. (regardless if the player is online or not)
+> Admin can access anyone's mailbox at anytime via `/mail peek <playername>`. (regardless if the player is online or not)
 
 ## Todo
 
@@ -42,7 +42,7 @@ From there you can issue `/mail send` with the packet in your hand to have it de
 
 \* At any time you can issue `/mail erase` to return a packet back into an empty packet, or `/mail delete` to simply delete the packet
 
-\*\* Admin can open packets by `/mail admin peek` while holding the packet in their hand (This actually is just the code for editing the packet, so if an Admin finds items that a regular player should not have and they are sending it thru Mail Packets the Admin can choose to simply remove the item)
+\*\* Admin can open packets by `/mail open` while holding the packet in their hand (This actually is just the code for editing the packet, so if an Admin finds items that a regular player should not have and they are sending it thru Mail Packets the Admin can choose to simply remove the item)
 
 ## Tributes
 

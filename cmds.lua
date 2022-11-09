@@ -1,0 +1,38 @@
+
+-- Chat commands:
+-- Root command is mail. (will show a help menu when issued by itself and/or will show a help menu when issued with 'mail help')
+--
+-- mail new
+-- Creates a new packet_empty (waiting to be composed)
+--
+-- mail erase
+-- If a non packet_empty is in hand (and the issuer is either the from or the to on the packet) replace the packet with a packet_empty
+--
+-- mail edit
+-- Edits a packet in hand (so long as the issuer is the from), allows for adding additional items and or updating the message contents
+--
+-- mail send
+-- Sends a non packet_empty in hand
+-- If the packet's to is online and they have inventory space to recieve the packet the packet is placed in their inventory
+-- If the packet's to is offline or doesn't have enough inventory space to recieve the packet, it is placed into their virtual mailbox
+-- If the packet's to is online but has the setting "send_all_packets_to_mailbox" true then the packet is placed into their virtual mailbox
+--
+-- mail box
+-- Virtually accesses the issuers mailbox
+--
+-- mail peek <playername>
+-- Admin command for accessing the given playername's virtual mailbox
+--
+-- mail settings
+-- Displays a GUI/Formspec to change settings (per player)
+-- Some settings:
+-- * 'send_all_packets_to_mailbox', boolean, If true all packets are placed into the virtual mailbox regardless of if the player is online
+--    and has inventory space
+-- * 'show_notices_about_mail', boolean, If true the player will recieve a chat message about inbound mail and a chat message when they login
+--    about mail in their virtual mailbox
+-- * 'blacklist_mail_from', text as list, Any playername separated by newline within this list when they issue mail send will recieve a chat message
+--    saying the packet wasn't delivered because that player blacklisted them (good for preventing junk spam such as players sending bunches of cobble)
+--
+-- mail info
+-- Displays a GUI/Formspec of the mod version, total packets sent, total packets recieved (opened), and total packets rejected (player sent another player
+--   mail but it was blocked due to blacklist_mail_from setting)
